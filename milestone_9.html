@@ -1,0 +1,141 @@
+<html>
+<style>
+body{
+background-image:url('https://wallpapercave.com/wp/wp2561091.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+
+<h2>JavaScript Array Methods</h2> 
+<h2>toString()</h2>
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let txt = "";
+fruits.forEach(myFunction);
+
+document.getElementById("demo").innerHTML = "BY USING STRING METHODS"+"<br>"+fruits.toString()+"<br>"+fruits.join(" * ")+"<br>"+fruits.pop()+"<br>"+fruits.push("Kiwi")+"<br>"+fruits.shift()+"<br>"+fruits.unshift("Lemon")+"<br>"+fruits.splice(2, 2, "Lemon", "Kiwi")+"<br>"+"BY USING FOR EACH "+"<br>"+txt;
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+<html>
+<style>
+body{
+background-image:url('https://wallpapercave.com/wp/wp2561091.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+<h1 style="text-align:center";>USING ITERATOR FUNCTION</h1>
+<script>
+const a=(fn,seed)=>
+{
+let res=[],
+val=[null,seed];
+while((val=fn(val[1]))) res.push(val[0]);
+return res;
+};
+var rem=n=>(n>50?false:[-n,n+10]);
+document.write(a(rem,10));
+</script>
+</body>
+</html>
+<html>
+<head>
+<title>JS FUNC</title>
+</head>
+<style>
+body{
+background-image:url('https://wallpapercave.com/wp/wp2561091.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+<h1 style="text-align:center";>ALPHABETICAL ORDER OF A STRING</h1> 
+<p id="demo"></p>
+
+<script>
+function alp_ord(str)
+{
+
+return str.split('').sort().join('');
+}
+
+document.getElementById("demo").innerHTML="The alphabetical order of the given string is " +"<br>"+ alp_ord("webmaster")
+</script>
+</body>
+</html>
+<html>
+<head>
+<title>JSON</title>
+</head>
+<style>
+body{
+background-image:url('https://wallpapercave.com/wp/wp2561091.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+<h2 style="text-align:center";>CONVERT JSON INTO VEHICLE OBJECT</h2>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var obj='{ "name": "Toyota Rav4", "engine": "2.5L", "price": 32000 }';
+var obj2=JSON.parse(obj);
+document.getElementById("demo1").innerHTML=obj2.name+"  who has brought the engine of    "+obj2.engine+"  with the price  "+obj2.price;
+document.getElementById("demo").innerHTML=obj;
+</script>
+</body>
+</html>
+<html>
+<style>
+body{
+background-image:url('https://wallpapercave.com/wp/wp2561091.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+<h2 style="text-align:center";>BY USING FUNCTIONS REJECT AND RESOLVE</h2>
+
+<h2>JavaScript Promise</h2>
+
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    myResolve(" THE VALUE MENTIONED AND COMPARED IS 'TRUE'");
+  } else {
+    myReject("ERROR");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+</script>
+
+</body>
+</html>
